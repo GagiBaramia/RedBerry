@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1920px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: "Helvetica Neue";
+    src: url(/Fonts/HelveticaNeue-01.ttf);
+}
+
+.LOGO1 {
+    width: 236px;
+    height: 38px;
+    position: absolute;
+    left: 70px;
+    top: 25px;
+}
+
+.LOGO2 {
+    width: 299px;
+    height: 299px;
+    position: absolute;
+    top: 473px;
+    left: 1076px;
+}
+
+.HR1 {
+    position: absolute;
+    border: solid 1px #1A1A1A;
+    top: 89px;
+    left: 70px;
+    height: 0px;
+    right: 70px;
+}
+
+.Button1 {
+    width: 464px;
+    height: 60px;
+    position: absolute;
+    left: 728px;
+    top: 513px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 60px;
+    gap: 20px;
+    background: #1A1A1A;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.Button1:hover{
+    background-color: #3a3939;
+    border: none;
+    transform: scale(1.1);
+}
+
+.a1 {
+    color: white;
+}
+
+.Link_a {
+    text-decoration: none;
+}
+.Button_P{
+    width: 212px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: 'Helvetica Neue';
+}
