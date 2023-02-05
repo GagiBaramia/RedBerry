@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 }
 
- @font-face {
+@font-face {
     font-family: "Helvetica Neue";
     src: url(/Fonts/HelveticaNeue-01.ttf);
 }
@@ -36,6 +36,28 @@ body {
     right: 70px;
 }
 
+.BackClick {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 48px;
+    top: 45px;
+    background: #FFFFFF;
+    border-radius: 100%;
+}
+
+.BackClick:hover {
+    transform: scale(1.2);
+}
+
+.BackClickArrow {
+    position: absolute;
+    width: 9.21px;
+    height: 16px;
+    left: 62px;
+    top: 57px;
+}
+
 .Button1 {
     width: 464px;
     height: 60px;
@@ -53,7 +75,8 @@ body {
     cursor: pointer;
     transition-duration: 0.3s;
 }
-.Button1:hover{
+
+.Button1:hover {
     background-color: #3a3939;
     border: none;
     transform: scale(1.1);
@@ -66,7 +89,8 @@ body {
 .Link_a {
     text-decoration: none;
 }
-.Button_P{
+
+.Button_P {
     width: 212px;
     height: 24px;
     font-style: normal;
@@ -79,3 +103,448 @@ body {
     flex-grow: 0;
     font-family: 'Helvetica Neue';
 }
+
+.Large_P {
+    position: absolute;
+    width: 179px;
+    height: 29px;
+    left: 149px;
+    top: 42px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1A1A1A;
+}
+
+.RedHr1 {
+    position: absolute;
+    width: 798px;
+    height: 0px;
+    left: 150px;
+    top: 88px;
+    border: 1px solid #1A1A1A;
+}
+
+.Parts {
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    left: 920px;
+    top: 49px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    color: #1A1A1A;
+}
+
+.Name_P {
+    width: 371px;
+    height: 21px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.NameDiv {
+    width: 370px;
+    height: 122px;
+    position: absolute;
+    left: 126px;
+    top: 157px;
+    border: none;
+    padding: 8px 24px;
+}
+
+.label1 {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    position: absolute;
+    top: 8px;
+    left: 24px;
+    color: black;
+}
+
+.NameInput {
+    box-sizing: border-box;
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+    padding: 13px 14px 16px 15px;
+}
+
+.NameInput input::placeholder {
+    width: 339px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.MinLetter {
+    width: 471px;
+    height: 21px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    position: absolute;
+    top: 93px;
+    left: 24px;
+    line-height: 1px;
+}
+
+.SurnameDiv {
+    width: 370px;
+    height: 122px;
+    position: absolute;
+    left: 545px;
+    top: 157px;
+    border: none;
+    padding: 8px 24px;
+}
+
+.OwnPhoto {
+    position: absolute;
+    width: 232px;
+    height: 22px;
+    left: 150px;
+    top: 325px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1A1A1A;
+}
+
+.PR_Picture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 12px;
+    gap: 10px;
+    position: absolute;
+    width: 107px;
+    height: 10px;
+    left: 401px;
+    top: 322px;
+    background: #0E80BF;
+    border-radius: 4px;
+}
+
+.PR_Picture:hover {
+    cursor: pointer;
+}
+
+.PR_Picture input {
+    display: none;
+}
+
+.PR_Picture label {
+    width: 69px;
+    height: 17px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.PR_Picture label:hover {
+    cursor: pointer;
+}
+
+#ProfilePicture {
+    width: 246px;
+    display: none;
+    position: absolute;
+    left: 501px;
+    top: 48px;
+    border-radius: 133px;
+}
+
+.Titles {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.About {
+    padding: 8px 24px;
+    border: none;
+    position: absolute;
+    width: 790px;
+    height: 148px;
+    left: 126px;
+    top: 393px;
+}
+
+.About label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.About textarea {
+    box-sizing: border-box;
+    width: 798px;
+    height: 103px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+    resize: none;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding: 12px 16px 10px 16px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+}
+
+.About textarea::placeholder {
+    position: absolute;
+    height: 21px;
+    left: 16px;
+    right: 16px;
+    top: 13px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.Email {
+    padding: 8px 24px;
+    border: none;
+    position: absolute;
+    width: 790px;
+    height: 122px;
+    left: 126px;
+    top: 558px;
+}
+
+.Email input {
+    box-sizing: border-box;
+    width: 798px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    margin-top: 10px;
+
+}
+
+.PhoneNumber {
+    padding: 8px 24px;
+    border: none;
+    position: absolute;
+    width: 790px;
+    height: 122px;
+    left: 126px;
+    top: 730px;
+}
+
+.PhoneNumber input {
+    box-sizing: border-box;
+    width: 798px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.NextPage {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    left: 797px;
+    top: 967px;
+    background: #6B40E3;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.NextPage:hover {
+    background: #5227c9;
+    border: none;
+}
+
+.NextPage_P {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 10px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+
+.MotherDiv {
+    height: 1080px;
+    background-color: #f9f9f9;
+}
+
+.Conteiner {
+    position: absolute;
+    width: 822px;
+    height: 1080px;
+    right: 0px;
+    top: 0px;
+    border: none;
+    background: #FFFFFF;
+}
+
+.RedStar {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 78px;
+    top: 994px;
+}
+
+.CNT_Name1 {
+    position: absolute;
+    width: 123px;
+    height: 42px;
+    left: 80px;
+    top: 68px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    color: #F93B1D;
+    word-wrap: break-word;
+}
+
+.CNT_Surname1 {
+    position: absolute;
+    width: 150px;
+    height: 42px;
+    left: 223px;
+    top: 68px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    /* identical to box height */
+
+
+    color: #F93B1D;
+    word-wrap: break-word;
+
+}
+
+.CNT_Email1 {
+    position: absolute;
+    width: 179px;
+    height: 21px;
+    left: 111px;
+    top: 127px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* off black */
+
+    color: #1A1A1A;
+    word-wrap: break-word;
+
+}
+
+.CNT_Number1{
+    position: absolute;
+    width: 151px;
+    height: 21px;
+    left: 111px;
+    top: 158px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* off black */
+
+    color: #1A1A1A;
+    word-wrap: break-word;
+}
+
+.CNT_About1{
+    position: absolute;
+width: 432px;
+height: 72px;
+left: 80px;
+top: 250px;
+
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* or 138% */
+
+text-transform: lowercase;
+
+color: #000000;
+word-wrap: break-word;
+}
+
+.icon {
+    padding-left: 25px;
+    background: url("EmailLogo.png") no-repeat left;
+    background-size: 20px;
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>პირადი ინფორმაცია</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+
+  <div class="MotherDiv">
+    <form>
+      <a href="index.html">
+        <img class="BackClick" src="Ellipse 1.png" alt="">
+      </a>
+      <a href="index.html">
+        <img class="BackClickArrow" src="Vector.png" alt="">
+      </a>
+      <p class="Large_P">პირადი ინფო</p>
+      <p class="Parts">1/3</p>
+      <hr class="RedHr1">
+      <div class="NameDiv">
+        <label class="label1" for="">სახელი</label>
+        <input class="NameInput" type="text" id="Name_ID" placeholder="ანზორ" required minlength="2">
+        <p class="MinLetter">მინიმუმ 2 ასო, ქართული ასოები</p>
+      </div>
+      <div class="SurnameDiv">
+        <label class="label1" for="">გვარი</label>
+        <input id="Surname_ID" class="NameInput" type="text" placeholder="მუმლაძე" required minlength="2">
+        <p class="MinLetter">მინიმუმ 2 ასო, ქართული ასოები</p>
+      </div>
+      <label class="OwnPhoto" for="">პირადი ფოტოს ატვირთვა</label>
+      <div class="PR_Picture">
+        <label for="UploadPR">ატვირთვა</label>
+        <input type="file" id="UploadPR" accept="image/*" onchange="showPreview(event);" required>
+      </div>
+      <div class="About">
+        <label class="Titles" for="">ჩემ შესახებ (არასავალდებულო)</label>
+        <textarea id="About_ID" placeholder="ზოგადი ინფო ჩვენს შესახებ" cols="30" rows="10"></textarea>
+      </div>
+      <div class="Email">
+        <label class="Titles" for="">ელ.ფოსტა</label>
+        <input id="Email_ID"  type="email" placeholder="anzorr666@redberry.ge" required>
+        <p class="MinLetter">უნდა მთავრდებოდეს @redberry.ge</p>
+      </div>
+      <div class="PhoneNumber">
+        <label class="Titles for="">ტელეფონის ნომერი</label>
+        <input id="Number_ID" type=" number" placeholder="+995 551 12 34 56" required>
+          <p class="MinLetter">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
+      </div>
+      <a href="">
+        <button class="NextPage">
+          <p class="NextPage_P">შემდეგი</p>
+        </button>
+      </a>
+  </div>
+  </form>
+  <div class="Conteiner">
+    <img id="ProfilePicture">
+    <div id="CNT_Name" class="CNT_Name1"></div>
+    <div id="CNT_Surname" class="CNT_Surname1"></div>
+    <div id="CNT_Email" class="CNT_Email1"></div>
+    <div id="CNT_Number" class="CNT_Number1"></div>
+    <div id="CNT_About" class="CNT_About1"></div>
+    <img class="RedStar" src="LOGO-12 1.png" alt="">
+  </div>
+  <script>
+  </script>
+</body>
+
+</html>
