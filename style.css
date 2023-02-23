@@ -106,15 +106,19 @@ body {
 
 .Large_P {
     position: absolute;
-    width: 179px;
+    width: 190px;
     height: 29px;
     left: 149px;
-    top: 42px;
+    top: 39px;
+
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
+
+    /* off black */
+
     color: #1A1A1A;
 }
 
@@ -192,6 +196,9 @@ body {
     top: 37px;
     left: 24px;
     padding: 13px 14px 16px 15px;
+    padding-left: 16px;
+    word-wrap: break-word;
+    outline: 0;
 }
 
 .NameInput input::placeholder {
@@ -331,11 +338,10 @@ body {
     font-size: 16px;
     font-family: 'Helvetica Neue';
     resize: none;
-    padding-top: 10px;
-    padding-left: 20px;
     padding: 12px 16px 10px 16px;
     font-size: 16px;
     font-family: 'Helvetica Neue';
+    outline: 0;
 }
 
 .About textarea::placeholder {
@@ -350,6 +356,10 @@ body {
     font-size: 16px;
     line-height: 21px;
     color: rgba(0, 0, 0, 0.6);
+}
+
+.About textarea:focus {
+    border: solid 2px green;
 }
 
 .Email {
@@ -370,7 +380,19 @@ body {
     border: 1px solid #BCBCBC;
     border-radius: 4px;
     margin-top: 10px;
+    outline: 0;
+}
 
+.Email input:required:focus:invalid {
+    background: url(Invalid_Icon.png) no-repeat 7px 7px;
+    background-position: 97.5%;
+    border: solid 2px red;
+}
+
+.Email input:required:valid {
+    background: url(Valid_Icon.png) no-repeat 7px 7px;
+    background-position: 97.5%;
+    border: solid 2px green;
 }
 
 .PhoneNumber {
@@ -391,11 +413,24 @@ body {
     border: 1px solid #BCBCBC;
     border-radius: 4px;
     margin-top: 10px;
+    outline: 0;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.PhoneNumber input:required:focus:invalid {
+    background: url(Invalid_Icon.png) no-repeat 7px 7px;
+    background-position: 97.5%;
+    border: solid 2px red;
+}
+
+.PhoneNumber input:required:valid {
+    background: url(Valid_Icon.png) no-repeat 7px 7px;
+    background-position: 97.5%;
+    border: solid 2px green;
 }
 
 .NextPage {
@@ -463,6 +498,7 @@ input::-webkit-inner-spin-button {
     line-height: 42px;
     color: #F93B1D;
     word-wrap: break-word;
+    display: block;
 }
 
 .CNT_Surname1 {
@@ -471,41 +507,31 @@ input::-webkit-inner-spin-button {
     height: 42px;
     left: 223px;
     top: 68px;
-
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
     line-height: 42px;
-    /* identical to box height */
-
-
     color: #F93B1D;
     word-wrap: break-word;
-
 }
 
 .CNT_Email1 {
     position: absolute;
-    width: 179px;
+    width: 189px;
     height: 21px;
     left: 111px;
     top: 127px;
-
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-
-    /* off black */
-
     color: #1A1A1A;
     word-wrap: break-word;
-
 }
 
-.CNT_Number1{
+.CNT_Number1 {
     position: absolute;
     width: 151px;
     height: 21px;
@@ -516,35 +542,367 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-
-    /* off black */
-
     color: #1A1A1A;
     word-wrap: break-word;
 }
 
-.CNT_About1{
+.CNT_About1 {
     position: absolute;
-width: 432px;
-height: 72px;
-left: 80px;
-top: 250px;
-
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 22px;
-/* or 138% */
-
-text-transform: lowercase;
-
-color: #000000;
-word-wrap: break-word;
+    width: 432px;
+    height: 72px;
+    left: 80px;
+    top: 250px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #000000;
+    word-wrap: break-word;
 }
 
 .icon {
     padding-left: 25px;
     background: url("EmailLogo.png") no-repeat left;
     background-size: 20px;
-  }
+}
+
+#Name_Span {
+    position: absolute;
+    left: 90px;
+    font-family: 'Helvetica Neue';
+    font-weight: 1000;
+}
+
+#Surname_Span {
+    position: absolute;
+    left: 80px;
+    font-family: 'Helvetica Neue';
+    font-weight: 1000;
+}
+
+.Position_Div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 846px;
+    height: 125px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 157px
+}
+
+.Position_Div label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.Position_Div input {
+    box-sizing: border-box;
+    width: 798px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+    padding: 13px 14px 16px 15px;
+    padding-left: 16px;
+    word-wrap: break-word;
+    outline: 0;
+}
+
+.Position_Div input::placeholder {
+    position: absolute;
+    height: 21px;
+    left: 16px;
+    right: 16px;
+    top: 13px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.Employed_Div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+    position: absolute;
+    width: 846px;
+    height: 125px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 294px;
+}
+
+.Employed_Div label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.Employed_Div input {
+    box-sizing: border-box;
+    width: 798px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+    padding: 13px 14px 16px 15px;
+    padding-left: 16px;
+    word-wrap: break-word;
+    outline: 0;
+}
+
+.Employed_Div input::placeholder {
+    position: absolute;
+    height: 21px;
+    left: 16px;
+    right: 16px;
+    top: 13px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.StartDate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 419px;
+    height: 125px;
+    left: calc(50% - 419px/2 - 624.5px);
+    top: 431px;
+}
+
+.EndDate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 419px;
+    height: 93px;
+    left: calc(50% - 419px/2 - 197.5px);
+    top: 431px;
+}
+
+.StartDate label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.EndDate label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.StartDate input {
+    box-sizing: border-box;
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+    padding: 13px 14px 16px 15px;
+    padding-left: 16px;
+    word-wrap: break-word;
+    outline: 0;
+    font-size: 16px;
+}
+
+.EndDate input {
+    box-sizing: border-box;
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+    padding: 13px 14px 16px 15px;
+    padding-left: 16px;
+    word-wrap: break-word;
+    outline: 0;
+    font-size: 16px;
+}
+
+.Description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 846px;
+    height: 168px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 541px;
+}
+
+.Description label {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.Description textarea {
+    box-sizing: border-box;
+    width: 798px;
+    height: 123px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    resize: none;
+    padding: 12px 16px 10px 16px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+    outline: 0;
+    
+    
+}
+
+.Description textarea::placeholder{
+    position: absolute;
+    height: 21px;
+    left: 16px;
+    right: 16px;
+    top: 13px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.HR2 {
+    position: absolute;
+    width: 798px;
+    height: 0px;
+    left: 149px;
+    top: 759px;
+
+    border: 1px solid #C1C1C1;
+}
+
+.AddMoreInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 14px;
+    gap: 20px;
+    position: absolute;
+    width: 289px;
+    height: 48px;
+    left: calc(50% - 289px/2 - 666.5px);
+    top: 804px;
+    background: #62A1EB;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.AddMoreInfo:hover {
+    background: #4386d3;
+}
+
+.AddInfo_P {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 10px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+}
+
+
+.BackPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 35px;
+    gap: 20px;
+    cursor: pointer;
+    position: absolute;
+    top:967px;
+    width: 113px;
+    height: 48px;
+    left: 150px;
+    bottom: 65px;
+    background: #6B40E3;
+    border-radius: 4px;
+    border: none;
+}
+
+.BackPage:hover{
+    background: #5227c9;
+    border: none;
+}
+
+.BackPage_P {
+    width: 43px;
+    height: 20px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+

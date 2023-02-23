@@ -10,10 +10,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </head>
+
 <body>
 
   <div class="MotherDiv">
-    <form>
+    <form id="Form_ID">
       <a href="index.html">
         <img class="BackClick" src="Ellipse 1.png" alt="">
       </a>
@@ -25,12 +26,14 @@
       <hr class="RedHr1">
       <div class="NameDiv">
         <label class="label1" for="">სახელი</label>
-        <input class="NameInput" type="text" id="Name_ID" placeholder="ანზორ" required minlength="2">
+        <input onkeydown="NameValidation()" class="NameInput" type="text" id="Name_ID" placeholder="ანზორ" required minlength="2">
         <p class="MinLetter">მინიმუმ 2 ასო, ქართული ასოები</p>
+        <span id="Name_Span"></span>
       </div>
       <div class="SurnameDiv">
         <label class="label1" for="">გვარი</label>
-        <input id="Surname_ID" class="NameInput" type="text" placeholder="მუმლაძე" required minlength="2">
+        <input onkeydown="SurnameValidation()" id="Surname_ID" class="NameInput" type="text" placeholder="მუმლაძე" required minlength="2">
+        <span id="Surname_Span"></span>
         <p class="MinLetter">მინიმუმ 2 ასო, ქართული ასოები</p>
       </div>
       <label class="OwnPhoto" for="">პირადი ფოტოს ატვირთვა</label>
@@ -44,15 +47,15 @@
       </div>
       <div class="Email">
         <label class="Titles" for="">ელ.ფოსტა</label>
-        <input id="Email_ID"  type="email" placeholder="anzorr666@redberry.ge" required>
+        <input id="Email_ID" type="email" placeholder="anzorr666@redberry.ge" required pattern=".+@redberry.ge">
         <p class="MinLetter">უნდა მთავრდებოდეს @redberry.ge</p>
       </div>
       <div class="PhoneNumber">
         <label class="Titles for="">ტელეფონის ნომერი</label>
-        <input id="Number_ID" type=" number" placeholder="+995 551 12 34 56" required>
+        <input id="Number_ID" type="text"  placeholder="+995 551 12 34 56" pattern="[+995]{4} [5]{1}[1-9]{2} [1-9]{2} [1-9]{2} [1-9]{2}" required >
           <p class="MinLetter">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
       </div>
-      <a href="">
+      <a href="Experience.html">
         <button class="NextPage">
           <p class="NextPage_P">შემდეგი</p>
         </button>
@@ -68,8 +71,6 @@
     <div id="CNT_About" class="CNT_About1"></div>
     <img class="RedStar" src="LOGO-12 1.png" alt="">
   </div>
-  <script>
-  </script>
 </body>
 
 </html>
